@@ -80,7 +80,7 @@ dns:
 proxies:
   - {"name":"ABox公益计划-US","type":"vmess","server":"scp.baiyunxray.top","port":443,"cipher":"auto","uuid":"7d04b6ca-939a-4ac1-bec4-34706a9cc68f","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/"}}
   - {"name":"ABox公益计划-JP","type":"vmess","server":"jp01.baiyunxray.top","port":443,"cipher":"auto","uuid":"f0d9de30-c2ca-4171-cbb5-7bda566d0d08","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/"}}
-  - {"name":"ABo公益计划-SG","type":"vmess","server":"sg.baiyunxray.top","port":443,"cipher":"auto","uuid":"4d59f07b-1f9a-4ca6-94c2-64e0595e2295","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/"}}
+  - {"name":"ABo公益计划-SG","type":"vmess","server":"sg01.baiyunxray.top","port":443,"cipher":"auto","uuid":"4d59f07b-1f9a-4ca6-94c2-64e0595e2295","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/"}}
 proxy-groups:
   - name: 🚀 节点选择
     type: select

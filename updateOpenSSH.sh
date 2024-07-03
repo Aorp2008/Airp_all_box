@@ -15,20 +15,21 @@ else
 fi
 
 if [ "$package_manager" = "apt" ]; then
+    echo "正在更新系统软件包......"
     apt-get update > /dev/null
     apt-get upgrade -y > /dev/null
     apt-get install -y make gcc git autoconf libssl-dev zlib1g-dev > /dev/null
 elif [ "$package_manager" = "yum" ]; then
+    echo "正在更新系统软件包......"
     yum update -y > /dev/null
     yum upgrade -y > /dev/null
     yum install -y make gcc git autoconf openssl-devel zlib-devel > /dev/null
 fi
-
+echo "开始更新, 耐心等待"
 temp_dir=$(mktemp -d)
 git clone https://github.com/openssh/openssh-portable "$temp_dir"
 clear
 cd "$temp_dir" || exit
-echo "开始更新, 耐心等待"
 autoreconf > /dev/null 2>&1
 ./configure > /dev/null 2>&1
 make > /dev/null 2>&1

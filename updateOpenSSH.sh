@@ -25,13 +25,16 @@ elif [ "$package_manager" = "yum" ]; then
 fi
 
 temp_dir=$(mktemp -d)
-git clone https://github.com/openssh/openssh-portable "$temp_dir" > /dev/null 2>&1
+git clone https://github.com/openssh/openssh-portable "$temp_dir"
+clear
 cd "$temp_dir" || exit
+echo "开始更新, 耐心等待"
 autoreconf > /dev/null 2>&1
 ./configure > /dev/null 2>&1
 make > /dev/null 2>&1
 make install > /dev/null 2>&1
 rm -rf "$temp_dir"
 . /etc/profile
+clear
 ssh -V
 echo "OpenSSH升级成功"
